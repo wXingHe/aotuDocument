@@ -56,7 +56,7 @@ int main()
             cout << "获取文件:" << (*it)[1] << " ";
             Document d((*it)[0],descriptionOnHead);
             d.check();
-            content = "#"+(*it)[1]+"\n\n";
+            content = "# "+(*it)[1]+"\n\n";
 
             //检测文件编码
             const char * str;

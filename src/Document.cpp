@@ -311,8 +311,8 @@ string Document::toMarkdown(int is_utf8){
     for(explainIter = explains.begin(); explainIter != explains.end(); explainIter++)
     {
         sprintf(itc,"%d",methodCounter);
-        content.append("##1.").append(itc).append(titles[methodCounter]).append("\n\n");
-        prepareString = "###函数: ";
+        content.append("## 1.").append(itc).append(titles[methodCounter]).append("\n\n");
+        prepareString = "### 函数: ";
         prepareString = is_utf8?  GbkToUtf8(prepareString.data()) : prepareString;
         content.append(prepareString+methods[methodCounter]+"\n\n");
         prepareString = "\t说明:\n\n";
@@ -321,7 +321,7 @@ string Document::toMarkdown(int is_utf8){
         explainsTmp = *explainIter;
         for(iter = explainsTmp.begin(); iter != explainsTmp.end(); iter++)
         {
-            content.append("\t*");
+            content.append("\t* ");
             explianTmp = *iter;
             for(it = explianTmp.begin(); it != explianTmp.end(); it++) {
                 explainCounter ++;
