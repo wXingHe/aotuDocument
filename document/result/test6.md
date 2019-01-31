@@ -2,9 +2,9 @@
 
 ##1.0      构造函数      
 
-###鍑芥暟:     __construct(Connection $connection = null, $model = null)    
+###函数:     __construct(Connection $connection = null, $model = null)    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -12,9 +12,9 @@
 
 ##1.1      利用__call方法实现一些特殊的Model方法      
 
-###鍑芥暟:     __call($method, $args)    
+###函数:     __call($method, $args)    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -28,17 +28,17 @@
    
 ##1.2      获取当前的数据库Connection对象      
 
-###鍑芥暟:     getConnection()    
+###函数:     getConnection()    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
 ##1.3      切换当前的数据库连接      
 
-###鍑芥暟:     connect($config)    
+###函数:     connect($config)    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -46,25 +46,25 @@
   
 ##1.4      设置当前的数据库Builder对象      
 
-###鍑芥暟:     protected setBuilder()    
+###函数:     protected setBuilder()    
 
-	璇存槑:
+	说明:
 
 	* @access  protected
    
 ##1.5      获取当前的模型对象实例      
 
-###鍑芥暟:     getModel()    
+###函数:     getModel()    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
 ##1.6      设置后续从主库读取数据      
 
-###鍑芥暟:     readMaster($allTable = false)    
+###函数:     readMaster($allTable = false)    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -72,17 +72,17 @@
   
 ##1.7      获取当前的builder实例对象      
 
-###鍑芥暟:     getBuilder()    
+###函数:     getBuilder()    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
 ##1.8      指定默认的数据表名（不含前缀）      
 
-###鍑芥暟:     name($name)    
+###函数:     name($name)    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -90,9 +90,9 @@
   
 ##1.9      指定默认数据表名（含前缀）      
 
-###鍑芥暟:     setTable($table)    
+###函数:     setTable($table)    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -100,9 +100,9 @@
 
 ##1.10      得到当前或者指定名称的数据表      
 
-###鍑芥暟:     getTable($name = '')    
+###函数:     getTable($name = '')    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -110,9 +110,9 @@
   
 ##1.11      将SQL语句中的__TABLE_NAME__字符串替换成带前缀的表名（小写）      
 
-###鍑芥暟:     parseSqlTable($sql)    
+###函数:     parseSqlTable($sql)    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -120,9 +120,9 @@
 
 ##1.12      执行查询 返回数据集      
 
-###鍑芥暟:     query($sql, $bind = [], $master = false, $class = false)    
+###函数:     query($sql, $bind = [], $master = false, $class = false)    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -140,9 +140,9 @@
    
 ##1.13      执行语句      
 
-###鍑芥暟:     execute($sql, $bind = [])    
+###函数:     execute($sql, $bind = [])    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -156,9 +156,9 @@
    
 ##1.14      获取最近插入的ID      
 
-###鍑芥暟:     getLastInsID($sequence = null)    
+###函数:     getLastInsID($sequence = null)    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -166,17 +166,17 @@
 
 ##1.15      获取最近一次查询的sql语句      
 
-###鍑芥暟:     getLastSql()    
+###函数:     getLastSql()    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
 ##1.16      执行数据库事务      
 
-###鍑芥暟:     transaction($callback)    
+###函数:     transaction($callback)    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -184,17 +184,17 @@
 
 ##1.17      启动事务      
 
-###鍑芥暟:     startTrans()    
+###函数:     startTrans()    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
 ##1.18      用于非自动提交状态下面的查询提交      
 
-###鍑芥暟:     commit()    
+###函数:     commit()    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -202,9 +202,9 @@
    
 ##1.19      事务回滚      
 
-###鍑芥暟:     rollback()    
+###函数:     rollback()    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -212,9 +212,9 @@
    
 ##1.20      批处理执行SQL语句      批处理的指令都认为是execute操作      
 
-###鍑芥暟:     batchQuery($sql = [], $bind = [])    
+###函数:     batchQuery($sql = [], $bind = [])    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -222,9 +222,9 @@
 
 ##1.21      获取数据库的配置参数      
 
-###鍑芥暟:     getConfig($name = '')    
+###函数:     getConfig($name = '')    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    
@@ -232,9 +232,9 @@
 
 ##1.22      得到分表的的数据表名      
 
-###鍑芥暟:     getPartitionTableName($data, $field, $rule = [])    
+###函数:     getPartitionTableName($data, $field, $rule = [])    
 
-	璇存槑:
+	说明:
 
 	* @access  public
    

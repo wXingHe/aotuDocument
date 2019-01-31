@@ -313,10 +313,10 @@ string Document::toMarkdown(int is_utf8){
         sprintf(itc,"%d",methodCounter);
         content.append("##1.").append(itc).append(titles[methodCounter]).append("\n\n");
         prepareString = "###º¯Êý: ";
-        prepareString = GbkToUtf8(prepareString.data());
+        prepareString = is_utf8?  GbkToUtf8(prepareString.data()) : prepareString;
         content.append(prepareString+methods[methodCounter]+"\n\n");
         prepareString = "\tËµÃ÷:\n\n";
-        prepareString = GbkToUtf8(prepareString.data());
+        prepareString = is_utf8?  GbkToUtf8(prepareString.data()) : prepareString;
         content.append(prepareString);
         explainsTmp = *explainIter;
         for(iter = explainsTmp.begin(); iter != explainsTmp.end(); iter++)
