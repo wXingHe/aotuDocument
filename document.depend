@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1548931033 source:e:\document\document\main.cpp
+	<iostream>
+	<string>
+	<Document.h>
+	<io.h>
+	<vector>
+	<direct.h>
+	<windows.h>
+
+1548931106 e:\document\document\include\document.h
+	<string>
+	<fstream>
+	<queue>
+	<vector>
+	<iostream>
+	<iterator>
+	<array>
+	<windows.h>
+
+1548924667 source:e:\document\document\src\document.cpp
+	"Document.h"
+
