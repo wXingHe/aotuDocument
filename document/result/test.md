@@ -4,11 +4,11 @@
 
 ### 函数:     __construct(Connection $connection = null, $model = null)    
 
-	说明:
+#### 说明:
 
-	*  @access  public
+*  @access  public
    
-	*  @param  Connection  $connection  数据库对象实例
+*  @param  Connection  $connection  数据库对象实例
 
 ## 1.1      利用__call方法实现一些特殊的Model方法      
 
