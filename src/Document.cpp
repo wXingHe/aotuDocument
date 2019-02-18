@@ -1,7 +1,8 @@
 #include "Document.h"
 
-Document::Document(string file, int ignore = 0)
+Document::Document(string file, int ignore = 0,int fileCounter = 1)
 {
+    fileNumber = fileCounter;
     ignoreBlock = ignore;
     int commentBlock = 0; //注释块计数器
     char ch;
@@ -305,13 +306,18 @@ string Document::toMarkdown(int is_utf8){
     vector<vector<string>> explainsTmp;
     int explainCounter = 0; //说明计数器,用于辨别说明类型[1=>说明类型,2=>参数类型,3=>参数名称,4=>参数描述]
     int methodCounter = 0; //方法计数器
+    int a = fileNumber; //a=>文件数量计数器类型,b=>文件数量计数器的字符类型,c=>文件数量计数器的字符串类型
+    char b[2];
+    string c;
     char itc[8];
     cout << " 说明如下 : " << endl;
     string prepareString;
     for(explainIter = explains.begin(); explainIter != explains.end(); explainIter++)
     {
-        sprintf(itc,"%d",methodCounter);
-        content.append("## 1.").append(itc).append(titles[methodCounter]).append("\n\n");
+        sprintf(itc,"%d",methodCounter+1);
+        sprintf(b,"%d",a);
+        c = b;
+        content.append("## " + c + ".").append(itc).append(titles[methodCounter]).append("\n\n");
         prepareString = "### 函数: ";
         prepareString = is_utf8?  GbkToUtf8(prepareString.data()) : prepareString;
         content.append(prepareString+methods[methodCounter]+"\n\n");

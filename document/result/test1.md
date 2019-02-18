@@ -1,6 +1,6 @@
-# test1
+# 2 test1
 
-## 1.0      构造函数      
+## 2.1      构造函数      
 
 ### 函数:     __construct(Connection $connection = null, $model = null)    
 
@@ -10,7 +10,7 @@
    
 	*  @param  Connection  $connection  数据库对象实例
 
-## 1.1      利用__call方法实现一些特殊的Model方法      
+## 2.2      利用__call方法实现一些特殊的Model方法      
 
 ### 函数:     __call($method, $args)    
 
@@ -26,7 +26,7 @@
    
 	*  @throws  DbException
    
-## 1.2      获取当前的数据库Connection对象      
+## 2.3      获取当前的数据库Connection对象      
 
 ### 函数:     getConnection()    
 
@@ -34,7 +34,7 @@
 
 	*  @access  public
    
-## 1.3      切换当前的数据库连接      
+## 2.4      切换当前的数据库连接      
 
 ### 函数:     connect($config)    
 
@@ -44,7 +44,7 @@
    
 	*  @param  mixed  $config
   
-## 1.4      设置当前的数据库Builder对象      
+## 2.5      设置当前的数据库Builder对象      
 
 ### 函数:     protected setBuilder()    
 
@@ -52,7 +52,7 @@
 
 	*  @access  protected
    
-## 1.5      获取当前的模型对象实例      
+## 2.6      获取当前的模型对象实例      
 
 ### 函数:     getModel()    
 
@@ -60,7 +60,7 @@
 
 	*  @access  public
    
-## 1.6      设置后续从主库读取数据      
+## 2.7      设置后续从主库读取数据      
 
 ### 函数:     readMaster($allTable = false)    
 
@@ -70,7 +70,7 @@
    
 	*  @param  bool  $allTable
   
-## 1.7      获取当前的builder实例对象      
+## 2.8      获取当前的builder实例对象      
 
 ### 函数:     getBuilder()    
 
@@ -78,7 +78,7 @@
 
 	*  @access  public
    
-## 1.8      指定默认的数据表名（不含前缀）      
+## 2.9      指定默认的数据表名（不含前缀）      
 
 ### 函数:     name($name)    
 
@@ -88,7 +88,7 @@
    
 	*  @param  string  $name
   
-## 1.9      指定默认数据表名（含前缀）      
+## 2.10      指定默认数据表名（含前缀）      
 
 ### 函数:     setTable($table)    
 
@@ -98,7 +98,7 @@
    
 	*  @param  string  $table  表名
 
-## 1.10      得到当前或者指定名称的数据表      
+## 2.11      得到当前或者指定名称的数据表      
 
 ### 函数:     getTable($name = '')    
 
@@ -108,7 +108,7 @@
    
 	*  @param  string  $name
   
-## 1.11      将SQL语句中的__TABLE_NAME__字符串替换成带前缀的表名（小写）      
+## 2.12      将SQL语句中的__TABLE_NAME__字符串替换成带前缀的表名（小写）      
 
 ### 函数:     parseSqlTable($sql)    
 
@@ -118,7 +118,7 @@
    
 	*  @param  string  $sql  sql语句
 
-## 1.12      执行查询 返回数据集      
+## 2.13      执行查询 返回数据集      
 
 ### 函数:     query($sql, $bind = [], $master = false, $class = false)    
 
@@ -138,7 +138,7 @@
    
 	*  @throws  BindParamException
    
-## 1.13      执行语句      
+## 2.14      执行语句      
 
 ### 函数:     execute($sql, $bind = [])    
 
@@ -154,7 +154,7 @@
    
 	*  @throws  BindParamException
    
-## 1.14      获取最近插入的ID      
+## 2.15      获取最近插入的ID      
 
 ### 函数:     getLastInsID($sequence = null)    
 
@@ -164,7 +164,7 @@
    
 	*  @param  string  $sequence  自增序列名
 
-## 1.15      获取最近一次查询的sql语句      
+## 2.16      获取最近一次查询的sql语句      
 
 ### 函数:     getLastSql()    
 
@@ -172,7 +172,7 @@
 
 	*  @access  public
    
-## 1.16      执行数据库事务      
+## 2.17      执行数据库事务      
 
 ### 函数:     transaction($callback)    
 
@@ -182,7 +182,7 @@
    
 	*  @param  callable  $callback  数据操作方法回调
 
-## 1.17      启动事务      
+## 2.18      启动事务      
 
 ### 函数:     startTrans()    
 
@@ -190,7 +190,7 @@
 
 	*  @access  public
    
-## 1.18      用于非自动提交状态下面的查询提交      
+## 2.19      用于非自动提交状态下面的查询提交      
 
 ### 函数:     commit()    
 
@@ -200,7 +200,7 @@
    
 	*  @return  void
    
-## 1.19      事务回滚      
+## 2.20      事务回滚      
 
 ### 函数:     rollback()    
 
@@ -210,7 +210,7 @@
    
 	*  @return  void
    
-## 1.20      批处理执行SQL语句      批处理的指令都认为是execute操作      
+## 2.21      批处理执行SQL语句      批处理的指令都认为是execute操作      
 
 ### 函数:     batchQuery($sql = [], $bind = [])    
 
@@ -220,7 +220,7 @@
    
 	*  @param  array  $sql  SQL批处理指令
 
-## 1.21      获取数据库的配置参数      
+## 2.22      获取数据库的配置参数      
 
 ### 函数:     getConfig($name = '')    
 
@@ -230,7 +230,7 @@
    
 	*  @param  string  $name  参数名称
 
-## 1.22      得到分表的的数据表名      
+## 2.23      得到分表的的数据表名      
 
 ### 函数:     getPartitionTableName($data, $field, $rule = [])    
 

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1548931898 source:e:\document\document\main.cpp
+1550478078 source:e:\document\document\main.cpp
 	<iostream>
 	<string>
 	<Document.h>
@@ -8,7 +8,7 @@
 	<direct.h>
 	<windows.h>
 
-1548931464 e:\document\document\include\document.h
+1550478762 e:\document\document\include\document.h
 	<string>
 	<fstream>
 	<queue>
@@ -18,6 +18,6 @@
 	<array>
 	<windows.h>
 
-1548924667 source:e:\document\document\src\document.cpp
+1550479308 source:e:\document\document\src\document.cpp
 	"Document.h"
 

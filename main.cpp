@@ -34,7 +34,7 @@ int main()
     cin >> suffix;
 
     int descriptionOnHead;
-    cout << "文档头部是否有文档说明需要忽略?\n若有请输入该头部说明的数量;若无请输入0" << endl;
+    cout << "文档头部是否有/**/说明需要忽略?\n若有请输入该头部说明的数量;若无请输入0" << endl;
     cin >> descriptionOnHead;
     descriptionOnHead = descriptionOnHead > 0 ? descriptionOnHead : 0;
     string path = "E:\\document\\document\\document";
@@ -51,12 +51,18 @@ int main()
     }
     string content = "";
     string documentContent;
+    int fileConter = 0;
     int is_utf8 = 0;
+    char fileNumber[4];
+    string fileNumberString;
     for(vector<vector<string>>::iterator it=files.begin();it!=files.end();it++){
+            fileConter ++;
             cout << "获取文件:" << (*it)[1] << " ";
-            Document d((*it)[0],descriptionOnHead);
+            Document d((*it)[0],descriptionOnHead,fileConter);
             d.check();
-            content = "# "+(*it)[1]+"\n\n";
+            sprintf(fileNumber,"%d",fileConter);
+            fileNumberString = fileNumber;
+            content = "# "+ fileNumberString + " " +(*it)[1]+"\n\n";
 
             //检测文件编码
             const char * str;
